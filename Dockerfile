@@ -19,8 +19,8 @@ RUN printf '%s\n' \
 '        fastcgi_pass pet-app-api:9000;' \
 '        fastcgi_index index.php;' \
 '' \
-'        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;' \
-'        fastcgi_param DOCUMENT_ROOT $realpath_root;' \
+'        fastcgi_param SCRIPT_FILENAME /var/www/html$fastcgi_script_name;' \
+'        fastcgi_param DOCUMENT_ROOT /var/www/html/public;' \
 '    }' \
 '' \
 '    location ~ /\. {' \
